@@ -9,8 +9,21 @@ nav {
     height: 67px;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    justify-content: center;
+    font-size: 18px;
     font-weight: 600;
+}
+
+nav > div {
+    display:flex;
+    width:1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div > div {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
@@ -29,3 +42,44 @@ nav {
     background-color: red;
 }
 
+
+#main {
+    display:flex;
+    justify-content: center;
+}
+
+#main > div {
+    width:1200px;
+    padding-top:50px;
+    display:flex
+}
+
+#login {
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+}
+
+#login > div {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+#login > div > div {
+    width:300px;
+    display:flex;
+    font-size:17px;
+    gap:5px;
+    justify-content: center;
+}
+
+button {
+    font-size:17px;
+    padding:3px 12px
+}
+
+#login_error{
+    color:red
+}

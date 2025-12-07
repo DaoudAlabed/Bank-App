@@ -8,25 +8,59 @@
 </head>
 <body>
     <nav>
-        <img src="./img/logo.png" height="65">
-        <a onclick="openPage('home')">Home</a>
-        <a onclick="openPage('transacation')">Overschrijvingen</a>
-        <a onclick="openPage('account')">Rekening</a>
+        <div>
+            <div>
+                <img src="./img/logo.png" height="65">
+                <a ref="home" onclick="openPage('home')">Home</a> 
+                <a ref="transactions" onclick="openPage('transactions')">Overschrijvingen</a>
+                <a ref="account" onclick="openPage('account')">Rekening</a> 
+            </div>
+            <div>
+                <div id="logged_out">
+                    <a ref="login" onclick="openPage('login')">Login</a> 
+                </div>
+                <div id="logged_in" style="display:none">
+                    <a onclick="logout()">Logout</a> 
+                </div>
+            </div> 
+        </div>
+        
     </nav>
     <div id="main">
+
         <div id="home">
             <h1>Welkom terug!</h1>
         </div>
-        <div id="transacation">
+
+        <div id="transactions">
             <h1>Overschrijvingen</h1>
         </div>
+
         <div id="account">
-            <h1>Rekening</h1>   
+            <h1 id="balance">Rekening</h1>   
         </div>
+
+        <div id="login">
+            <div>
+                <div> <h2>Login</h2> </div>
+                <div>
+                    E-mail
+                    <input id="email">
+                </div>
+                <div>
+                    Password
+                    <input type="password" id="password">
+                </div>
+                <div> <button onclick="login()">Login</button> </div>
+                <div id="login_error">  </div>
+            </div>  
+        </div>
+
     </div>
 </body>
 
 <script src="./js/main.js"></script>
+
 </html>
 
 
